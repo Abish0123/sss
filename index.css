@@ -3556,3 +3556,126 @@ position: absolute;
     flex: initial;
   }
 }
+
+/* --- BLOG STYLES --- */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.article-card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.article-card__image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.article-card__content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.article-card__content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+    text-align: left;
+    margin-top: 0;
+}
+
+.article-card__excerpt {
+    font-size: 0.95rem;
+    color: #555;
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
+}
+
+.article-card__read-more {
+    font-weight: 700;
+    color: #711fb8;
+    text-decoration: none;
+    align-self: flex-start;
+}
+
+.article-card__read-more:hover {
+    text-decoration: underline;
+}
+
+/* Blog Post Styles */
+.blog-post-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.blog-post-header h1 {
+    font-size: 2.8rem;
+    color: var(--text-color);
+    text-shadow: none;
+}
+
+.blog-post-meta {
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    color: #777;
+    text-align: center;
+}
+
+.blog-post-image {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.blog-post-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.blog-post-content h2 {
+    font-size: 1.8rem;
+    text-align: left;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.blog-post-content p {
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.blog-post-content ul {
+    list-style-position: inside;
+    padding-left: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.blog-post-content li {
+    margin-bottom: 0.75rem;
+}
+
+@media (max-width: 768px) {
+    .blog-post-header h1 {
+        font-size: 2.2rem;
+    }
+}
